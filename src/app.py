@@ -56,4 +56,4 @@ if st.button("Predict Price"):
         predicted_price = xgb_model.predict(features)[0]
     else:
         predicted_price = lr_model.predict(features)[0]
-    st.success(f"Predicted Price: ${predicted_price:,.2f}")
+    st.success(f"Predicted Price: Rp.{predicted_price * 15584}")
