@@ -59,4 +59,4 @@ if st.button("Predict Price"):
     
     # Format harga menjadi Rupiah dengan pemisah titik
     predicted_price_formatted = f"Rp. {predicted_price:,.0f}"
-    st.success(predicted_price_formatted)
+    st.success(predicted_price_formatted * 15584)
