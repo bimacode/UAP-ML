@@ -56,4 +56,7 @@ if st.button("Predict Price"):
         predicted_price = xgb_model.predict(features)[0]
     else:
         predicted_price = lr_model.predict(features)[0]
-    st.success(f"Predicted Price: Rp.{predicted_price * 15584}")
+    
+    # Format harga menjadi Rupiah dengan pemisah titik
+    predicted_price_formatted = f"Rp. {predicted_price:,.0f}"
+    st.success(predicted_price_formatted)
